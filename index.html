@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -12,12 +13,15 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="favicon.png" />
 
   <title>Brady Stroud</title>
   <link rel="manifest" href="manifest.json">
 </head>
+
 <body id="app-container">
+
+
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
@@ -27,7 +31,20 @@
         navigator.serviceWorker.register('flutter_service_worker.js');
       });
     }
+    //Code below was added by me. Above was all here when i got here :)
+    function call() { // This is an alt method to the issue on line 45 works fine but is definitely not best practise
+      window.open('tel:+61437244049');
+    }
+    function mail() {
+      window.location.href = "mailto:bradystroud@me.com";
+    }
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
+  <script src="app.js" defer></script>
 </body>
+<!-- Trying to link a .js file to this document. following: https://fireship.io/snippets/using-js-with-flutter-web/  Not working. -->
+<!-- <head>        
+  <script src="app.js" defer></script>
+</head> -->
+
 </html>
